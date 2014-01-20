@@ -22,6 +22,23 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
   
   <body>
     This is my JSP page. <br>
-    dfafaf
+    <%
+    //使用pageContext设置属性，该属性默认在page范围内
+pageContext.setAttribute("page", "hello");
+//使用request设置属性，该属性默认在request范围内
+request.setAttribute("request", "request");	
+session.setAttribute("session", "session");
+application.setAttribute("application", "application");
+
+out.println(pageContext.getAttributesScope("page") +"<br>");
+out.println(pageContext.getAttributesScope("request") +"<br>");
+out.println(pageContext.getAttributesScope("session") +"<br>");
+out.println(pageContext.getAttributesScope("application") +"<br>");
+%>
+<form action="testWeb">
+	<input type="text" name="content" value="123"></input>
+	<input type="submit" name="sub" value="提交"></input>
+</form>
   </body>
 </html>
+
