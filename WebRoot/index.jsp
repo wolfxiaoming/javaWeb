@@ -1,4 +1,4 @@
-<%@ page language="java" import="java.util.*" pageEncoding="ISO-8859-1"%>
+<%@ page language="java" import="java.util.*" pageEncoding="utf-8"%>
 <%
 String path = request.getContextPath();
 String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.getServerPort()+path+"/";
@@ -18,6 +18,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 	<!--
 	<link rel="stylesheet" type="text/css" href="styles.css">
 	-->
+	
   </head>
   
   <body>
@@ -34,11 +35,14 @@ out.println(pageContext.getAttributesScope("page") +"<br>");
 out.println(pageContext.getAttributesScope("request") +"<br>");
 out.println(pageContext.getAttributesScope("session") +"<br>");
 out.println(pageContext.getAttributesScope("application") +"<br>");
+
 %>
-<form action="testWeb">
+<%=request.getContextPath()%>
+<form name="form" id="form" method = "post" action="<%=request.getContextPath()%>/liumx">
 	<input type="text" name="content" value="123"></input>
-	<input type="submit" name="sub" value="提交"></input>
+	<input type="submit" name="sub" id="sub" value="提交"></input>
 </form>
   </body>
 </html>
+
 

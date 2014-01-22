@@ -2,7 +2,7 @@
     <wb-module deploy-name="LiumxProj">
         <wb-resource deploy-path="/" source-path="/WebRoot" tag="defaultRootSource"/>
         <wb-resource deploy-path="/WEB-INF/classes" source-path="/src"/>
-        <property name="context-root" value="LiumxProj"/>
         <property name="java-output-path" value="/LiumxProj/WebRoot/WEB-INF/classes"/>
+        <property name="context-root" value="/LiumxProj"/>
     </wb-module>
 </project-modules>
